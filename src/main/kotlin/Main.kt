@@ -1,3 +1,5 @@
+import java.lang.Exception
+
 fun main() {
 //println("Hello World")
 //    var x: Int = 3
@@ -60,7 +62,7 @@ fun main() {
 //    println(shoppingList2[4])
 
 //    loops: Execute a specific action several times. while loop and for loop.
-    val shoppingList2 = mutableListOf("Spider", "Hussle", "Seth", "Magic fingers")
+//    val shoppingList2 = mutableListOf("Spider", "Hussle", "Seth", "Magic fingers")
 
 ////while loop
 //    var counter = 0
@@ -68,8 +70,78 @@ fun main() {
 //        println(shoppingList2[counter])
 //        counter++
 //    }
-//    for loops
-    for(shoppingItem in shoppingList2){
-        println(shoppingItem)
+////    for loops
+//    for(shoppingItem in shoppingList2){
+//        println(shoppingItem)
+//    }
+////    looping over a particular range
+//    for(i in 1..100){
+//        println(i)
+//    }
+////    when expression
+//    val x = 3
+//    when(x){
+//       in 1..2 -> println("x is between 1 and 2")
+//        in 3..10 -> println("x is between 3 and 10")
+//        else ->{
+//            println("x is not in the range of 1 - 10")
+//        }
+//    }
+
+    //functions
+//    print10Numbers()
+//    val x = isEven(number = 5)
+//    println(x)
+//    val y = 3
+//    println(y.isOdd())
+
+
+////    classes
+//    val dog = Dog()
+//    dog.bark()
+//
+//    val cat = Cat()
+//    cat.meow()
+//
+////    exceptions, try catch
+//    val number = readLine() ?: "0"
+//    val parsedNumber = try{
+//        number.toInt()
+//    }catch (e: Exception){
+//        0
+//    }
+//    println(parsedNumber)
+
+
+//    lambda functions
+    val list = listOf("kotlin", "is", "fun")
+    val count = list.count{currentString ->
+        currentString.length == 3
+    }
+    println(count)
+}
+
+fun List<String>.customCount(function: (String)-> Boolean): Int {
+    var counter = 0
+    for(string in this){
+        if(function(string)){
+            counter++
+        }
+    }
+    return counter
+}
+//function
+fun Int.isOdd(): Boolean{
+    return this % 2 === 1
+}
+
+
+fun isEven(number: Int): Boolean{
+    return number % 2 == 0
+}
+
+fun print10Numbers(){
+    for(i in 1..10){
+        println(i)
     }
 }
