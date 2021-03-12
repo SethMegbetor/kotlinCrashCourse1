@@ -51,6 +51,25 @@ fun main() {
 //    val result =  number1.toInt() + number2.toInt()
 //    println(result)
 
-//    list: data containers we can use to store a bunch of variables
+////    list: data containers we can use to store a bunch of variables. Mutable and unmutable
+//    val shoppingList = listOf<String>("Lamborghini", "Penthouse", "Rolex")
+//    println(shoppingList[2])
+////    mutable list: we can add and remove items from the list
+//    val shoppingList2 = mutableListOf("Spider", "Hussle", "Seth", "Magic fingers")
+//    shoppingList2.add("Swagger")
+//    println(shoppingList2[4])
 
+//    loops: Execute a specific action several times. while loop and for loop.
+    val shoppingList2 = mutableListOf("Spider", "Hussle", "Seth", "Magic fingers")
+
+////while loop
+//    var counter = 0
+//    while (counter < shoppingList2.size){
+//        println(shoppingList2[counter])
+//        counter++
+//    }
+//    for loops
+    for(shoppingItem in shoppingList2){
+        println(shoppingItem)
+    }
 }
